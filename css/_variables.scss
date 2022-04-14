@@ -1,0 +1,65 @@
+$colors: (
+  main: #180afb,
+  sec: #263238e8,
+  blue: #3894ff,
+  header-bg: #fefdff,
+);
+$blacks: (
+  100%: rgb(0, 0, 0),
+  80%: rgba(0, 0, 0, 0.8),
+  60%: rgba(0, 0, 0, 0.6),
+  40%: rgba(0, 0, 0, 0.4),
+);
+$medias: (
+  facebook: #1877f2,
+  whatsapp: #25d366,
+  youtube: #e4405f,
+  pinterest: #bd081c,
+  linkedin: #0077b5,
+);
+
+$margins: (
+  mobile: 20px,
+  desktop: 60px,
+);
+
+$header-height: 80px;
+
+$shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+
+@function colors($color-name) {
+  @return map-get($map: $colors, $key: $color-name);
+}
+
+@function blacks($color-name) {
+  @return map-get($map: $blacks, $key: $color-name);
+}
+
+@function medias($color-name) {
+  @return map-get($map: $medias, $key: $color-name);
+}
+
+@function margins($devis-name) {
+  @return map-get($map: $margins, $key: $devis-name);
+}
+
+$tablet: 1134px;
+$mobile: 500px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+//******** Fonts ********//
+
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+/*@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+*/

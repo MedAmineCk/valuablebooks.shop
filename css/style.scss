@@ -1,0 +1,30 @@
+@use "./variables";
+@use "./default";
+@use "./modules";
+@use "./style.scss";
+
+html {
+    background: #f0f7ff;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: grid;
+}
+
+.preloader-container {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+        margin-bottom: 40px;
+    }
+}

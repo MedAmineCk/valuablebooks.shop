@@ -1,0 +1,147 @@
+@import "../variables";
+@import "../default";
+@import "../animations";
+@import "../modules";
+@import "./header";
+@import "./footer";
+
+body {
+    background: #fcffff;
+    main {
+        width: 100%;
+        max-width: $mobile;
+        margin: 0 auto;
+        position: relative;
+        padding-top: $header_height;
+        section {
+            &.cover {
+                .swiper {
+                    width: 100%;
+                    height: 300px;
+                    .swiper-ctrl {
+                        color: #fff;
+                        background: rgba(255, 255, 255, 0.571);
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &:after {
+                            font-size: 20px;
+                        }
+                    }
+                    .swiper-pagination-bullet {
+                        background: #ccc;
+                        &.swiper-pagination-bullet-active {
+                            background: #fff;
+                        }
+                    }
+                    .swiper-slide {
+                        width: 100%;
+                        padding: 20px;
+                        color: #fff;
+                        &.slide_1 {
+                            background: #ff8787;
+                        }
+                        &.slide_2 {
+                            background: rgb(11, 171, 174);
+                        }
+                        &.slide_3 {
+                            background: rgb(61, 155, 6);
+                        }
+                        .thumbnail {
+                            width: 200px;
+                            margin-right: 10px;
+                        }
+                        .product-title {
+                            font-size: 24px;
+                        }
+                        .stars {
+                            margin-bottom: 10px;
+                        }
+                        .sub-title {
+                            font-size: 14px;
+                            margin-bottom: 20px;
+                        }
+                        button {
+                            background: #fff;
+                            padding: 10px 20px;
+                            color: rgb(255, 0, 0);
+                            border-radius: 50px;
+                        }
+                    }
+                }
+            }
+            &.products {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px;
+                font-size: 12px;
+                padding: 4px;
+                .product-item {
+                    width: 180px;
+                    background: #fff;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                    .thumbnail {
+                    }
+                    .stars {
+                        span {
+                            font-size: 14px;
+                            color: gold;
+                        }
+                    }
+                    .content {
+                        padding: 4px;
+                        .product-title {
+                            font-size: 12px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3; /* number of lines to show */
+                            line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                        }
+                        table {
+                            td {
+                                .type {
+                                    color: #007185;
+                                    font-size: 12px;
+                                }
+                                .highlight {
+                                    background: #eb5757;
+                                    color: #fff;
+                                    font-size: 10px;
+                                    padding: 4px;
+                                    border-radius: 2px;
+                                }
+                                .price {
+                                    .currency,
+                                    .float {
+                                        font-size: 12px;
+                                    }
+                                    .num {
+                                        font-size: 24px;
+                                    }
+                                }
+                                .compared-price {
+                                    font-size: 12px;
+                                    .compared {
+                                        text-decoration: line-through;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .buy-btn {
+                        button {
+                            background: transparent;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
