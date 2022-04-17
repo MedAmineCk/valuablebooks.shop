@@ -57,10 +57,10 @@
         <section class="product">
             <div class="medias">
                 <div class="thumbnail">
-                    <img class="absolute-center" src="../img/books/book n 2.png">
+                    <img class="absolute-center" src="../img/books/easter.png">
                 </div>
                 <div class="images">
-                    <div class="img-item"><img src="../img/books/interiors/Annotation 2022-04-13 225110.png" alt="">
+                    <div class="img-item"><img src="../img/books/easter.png" alt="">
                     </div>
                     <div class="img-item"><img src="../img/books/interiors/Annotation 2022-04-13 225249.png" alt="">
                     </div>
@@ -126,6 +126,7 @@
                 </div>
                 <div class="description">
                     <div class="label">Description</div>
+                    <div class="A-plus"><img src="../img/A+.png" alt="" srcset=""></div>
                     <div class="container">
                         This fun coloring and drawing book features:<br>★ There are 33 Easter images to color.<br>★
                         There are 33 Easter images to draw.<br>★ Each image is on single sided pages to prevent
@@ -152,12 +153,17 @@
     <script src="../js/main.js"></script>
     <script src="../js/mobile.js"></script>
 
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
-        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+        $('.medias .images .img-item').on('click', function () {
+            //get img src
+            var img_src = $(this).find('img').attr('src');
+            console.log({ img_src })
+
+            //replace thumbnail img src with new src
+            $('.medias .thumbnail img').attr('src', img_src)
+        })
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script>
+
 </body>
 
 </html>
