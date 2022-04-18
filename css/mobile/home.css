@@ -522,7 +522,7 @@ body main section.cover .swiper .swiper-slide {
 }
 
 body main section.cover .swiper .swiper-slide.slide_1 {
-  background: #ff8787;
+  background: #99d1be;
 }
 
 body main section.cover .swiper .swiper-slide.slide_2 {
@@ -538,8 +538,15 @@ body main section.cover .swiper .swiper-slide .thumbnail {
   margin-right: 10px;
 }
 
+body main section.cover .swiper .swiper-slide .thumbnail img {
+  width: 160px;
+  height: 220px;
+}
+
 body main section.cover .swiper .swiper-slide .product-title {
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
 }
 
 body main section.cover .swiper .swiper-slide .stars {
@@ -554,7 +561,7 @@ body main section.cover .swiper .swiper-slide .sub-title {
 body main section.cover .swiper .swiper-slide button {
   background: #fff;
   padding: 10px 20px;
-  color: red;
+  color: #99d1be;
   border-radius: 50px;
 }
 
@@ -574,6 +581,21 @@ body main section.products .product-item {
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 6px;
+}
+
+body main section.products .product-item .thumbnail {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+body main section.products .product-item .thumbnail img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 body main section.products .product-item .stars span {

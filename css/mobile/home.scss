@@ -42,7 +42,7 @@ body {
                         padding: 20px;
                         color: #fff;
                         &.slide_1 {
-                            background: #ff8787;
+                            background: #99d1be;
                         }
                         &.slide_2 {
                             background: rgb(11, 171, 174);
@@ -53,9 +53,15 @@ body {
                         .thumbnail {
                             width: 200px;
                             margin-right: 10px;
+                            img {
+                                width: 160px;
+                                height: 220px;
+                            }
                         }
                         .product-title {
-                            font-size: 24px;
+                            font-size: 18px;
+                            font-weight: bold;
+                            color: #000;
                         }
                         .stars {
                             margin-bottom: 10px;
@@ -67,7 +73,7 @@ body {
                         button {
                             background: #fff;
                             padding: 10px 20px;
-                            color: rgb(255, 0, 0);
+                            color: #99d1be;
                             border-radius: 50px;
                         }
                     }
@@ -85,6 +91,16 @@ body {
                     border: 1px solid #ccc;
                     border-radius: 6px;
                     .thumbnail {
+                        width: 100%;
+                        height: 180px;
+                        overflow: hidden;
+                        position: relative;
+                        img {
+                            height: 100%;
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
                     }
                     .stars {
                         span {
