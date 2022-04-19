@@ -149,45 +149,8 @@ header {
           box-shadow: 0px 6px 12px 0px #cccccc47;
 }
 
-header .notice-bar {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-header .notice-bar .logo img {
-  width: 80px;
-}
-
-header .notice-bar .contact-info {
-  padding-right: 50px;
-}
-
-header .notice-bar .contact-info .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header .notice-bar .contact-info .flex-container .icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-  background: #6d6d6d;
-  color: #fff;
-  margin-right: 5px;
-}
-
-header .notice-bar .contact-info .flex-container .icon span {
-  font-size: 14px;
-}
-
-header .notice-bar .contact-info span.sub {
-  font-size: 8px;
+header .logo img {
+  width: 60px;
 }
 
 header nav {
@@ -484,6 +447,7 @@ body main {
 
 body main section.product {
   padding: 10px;
+  margin-bottom: 70px;
 }
 
 body main section.product .medias {
@@ -583,12 +547,15 @@ body main section.product .content .product-info .info-item .label {
 }
 
 body main section.product .content .product-info .info-item .data {
-  margin: 6px auto;
   font-weight: bolder;
-  font-size: 18px;
+  font-size: 12px;
 }
 
-body main section.product .content .product-info .info-item span {
+body main section.product .content .product-info .info-item .icon {
+  margin: 10px auto;
+}
+
+body main section.product .content .product-info .info-item .icon span {
   color: #585858;
 }
 
@@ -644,5 +611,53 @@ body main section.product .content .description .A-plus img {
 body main section.product .content .description .container {
   background: #ffffbe;
   padding: 10px;
+}
+
+body main section.action-bar {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0px;
+  padding: 10px 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.153);
+          box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.153);
+}
+
+body main section.action-bar .highlight {
+  background: #eb5757;
+  color: #fff;
+  font-size: 10px;
+  padding: 4px;
+  border-radius: 2px;
+}
+
+body main section.action-bar .price {
+  margin-right: 10px;
+}
+
+body main section.action-bar .price .currency,
+body main section.action-bar .price .float {
+  font-size: 12px;
+}
+
+body main section.action-bar .price .num {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+body main section.action-bar .compared-price {
+  font-size: 12px;
+}
+
+body main section.action-bar .compared-price .compared {
+  text-decoration: line-through;
+}
+
+body main section.action-bar button {
+  background: transparent;
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=product.css.map */

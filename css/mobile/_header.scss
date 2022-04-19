@@ -15,38 +15,11 @@ header {
     padding: 0 20px;
     box-shadow: 0px 6px 12px 0px #cccccc47;
 
-    .notice-bar {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        .logo {
-            img {
-                width: 80px;
-            }
-        }
-        .contact-info {
-            padding-right: 50px;
-            .flex-container {
-                display: flex;
-                .icon {
-                    $size: 20px;
-                    width: $size;
-                    height: $size;
-                    border-radius: $size;
-                    background: #6d6d6d;
-                    color: #fff;
-                    margin-right: 5px;
-                    span {
-                        font-size: 14px;
-                    }
-                }
-            }
-            span.sub {
-                font-size: 8px;
-            }
+    .logo {
+        img {
+            width: 60px;
         }
     }
-
     nav {
         display: none;
         position: absolute;

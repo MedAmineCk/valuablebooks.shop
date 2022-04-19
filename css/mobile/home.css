@@ -149,45 +149,8 @@ header {
           box-shadow: 0px 6px 12px 0px #cccccc47;
 }
 
-header .notice-bar {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-header .notice-bar .logo img {
-  width: 80px;
-}
-
-header .notice-bar .contact-info {
-  padding-right: 50px;
-}
-
-header .notice-bar .contact-info .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header .notice-bar .contact-info .flex-container .icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-  background: #6d6d6d;
-  color: #fff;
-  margin-right: 5px;
-}
-
-header .notice-bar .contact-info .flex-container .icon span {
-  font-size: 14px;
-}
-
-header .notice-bar .contact-info span.sub {
-  font-size: 8px;
+header .logo img {
+  width: 60px;
 }
 
 header nav {

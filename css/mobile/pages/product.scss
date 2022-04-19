@@ -17,6 +17,7 @@ body {
         section {
             &.product {
                 padding: 10px;
+                margin-bottom: 70px;
                 .medias {
                     display: flex;
                     margin-bottom: 10px;
@@ -82,12 +83,14 @@ body {
                                 color: rgb(88, 88, 88);
                             }
                             .data {
-                                margin: 6px auto;
                                 font-weight: bolder;
-                                font-size: 18px;
+                                font-size: 12px;
                             }
-                            span {
-                                color: rgb(88, 88, 88);
+                            .icon {
+                                margin: 10px auto;
+                                span {
+                                    color: rgb(88, 88, 88);
+                                }
                             }
                         }
                     }
@@ -135,6 +138,43 @@ body {
                             padding: 10px;
                         }
                     }
+                }
+            }
+            &.action-bar {
+                width: 100%;
+                background: #fff;
+                position: fixed;
+                bottom: 0px;
+                padding: 10px 40px;
+                justify-content: space-between;
+                box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.153);
+                .highlight {
+                    background: #eb5757;
+                    color: #fff;
+                    font-size: 10px;
+                    padding: 4px;
+                    border-radius: 2px;
+                }
+                .price {
+                    margin-right: 10px;
+                    .currency,
+                    .float {
+                        font-size: 12px;
+                    }
+                    .num {
+                        font-size: 28px;
+                        font-weight: bold;
+                    }
+                }
+                .compared-price {
+                    font-size: 12px;
+                    .compared {
+                        text-decoration: line-through;
+                    }
+                }
+                button {
+                    background: transparent;
+                    margin-bottom: 10px;
                 }
             }
         }
