@@ -613,6 +613,10 @@ body main section.product .content .description .container {
   padding: 10px;
 }
 
+body main section.product .content .description .container ol, body main section.product .content .description .container ul {
+  margin-left: 24px;
+}
+
 body main section.action-bar {
   width: 100%;
   background: #fff;

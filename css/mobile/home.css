@@ -489,11 +489,16 @@ body main section.cover .swiper .swiper-slide.slide_1 {
 }
 
 body main section.cover .swiper .swiper-slide.slide_2 {
-  background: #0babae;
+  background: #e6e7e9;
+  color: #000;
 }
 
 body main section.cover .swiper .swiper-slide.slide_3 {
-  background: #3d9b06;
+  background: #8db8c2;
+}
+
+body main section.cover .swiper .swiper-slide.slide_4 {
+  background: #7b7b7b;
 }
 
 body main section.cover .swiper .swiper-slide .thumbnail {
@@ -521,10 +526,10 @@ body main section.cover .swiper .swiper-slide .sub-title {
   margin-bottom: 20px;
 }
 
-body main section.cover .swiper .swiper-slide button {
+body main section.cover .swiper .swiper-slide a {
   background: #fff;
   padding: 10px 20px;
-  color: #99d1be;
+  color: #000000;
   border-radius: 50px;
 }
 
@@ -540,6 +545,7 @@ body main section.products {
 }
 
 body main section.products .product-item {
+  color: #000;
   width: 180px;
   background: #fff;
   border: 1px solid #ccc;
