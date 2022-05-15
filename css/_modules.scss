@@ -1,0 +1,44 @@
+.c-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    .label {
+        background: orange;
+        color: #000;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px;
+        margin-right: 10px;
+        .content {
+            margin-right: 10px;
+            word-wrap: none;
+            width: fit-content;
+            white-space: nowrap;
+        }
+        .dote {
+            background: #fff;
+            $size: 12px;
+            border-radius: $size;
+            width: $size;
+            height: $size;
+        }
+    }
+    .dote {
+        background: orangered;
+        $size: 6px;
+        border-radius: $size;
+        min-width: $size;
+        min-height: $size;
+        margin-right: 10px;
+    }
+    .hr {
+        width: 100%;
+        $size: 4px;
+        height: $size;
+        background: orange;
+        border-radius: $size;
+    }
+}

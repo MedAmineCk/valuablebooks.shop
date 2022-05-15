@@ -124,6 +124,67 @@ body::-webkit-scrollbar-thumb,
   }
 }
 
+.c-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+
+.c-label .label {
+  background: orange;
+  color: #000;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px;
+  margin-right: 10px;
+}
+
+.c-label .label .content {
+  margin-right: 10px;
+  word-wrap: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.c-label .label .dote {
+  background: #fff;
+  border-radius: 12px;
+  width: 12px;
+  height: 12px;
+}
+
+.c-label .dote {
+  background: orangered;
+  border-radius: 6px;
+  min-width: 6px;
+  min-height: 6px;
+  margin-right: 10px;
+}
+
+.c-label .hr {
+  width: 100%;
+  height: 4px;
+  background: orange;
+  border-radius: 4px;
+}
+
 header {
   background: #fefdff;
   width: 100%;
@@ -533,7 +594,74 @@ body main section.cover .swiper .swiper-slide a {
   border-radius: 50px;
 }
 
-body main section.products {
+body main section.categories .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 10px;
+}
+
+body main section.categories .container .categorie-item {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+body main section.categories .container .categorie-item.coloring {
+  background: linear-gradient(132deg, #fad961 3.49%, #f76b1c 97.49%);
+}
+
+body main section.categories .container .categorie-item.puzzel {
+  background: linear-gradient(132deg, #6253e1 3.49%, #04befe 97.49%);
+}
+
+body main section.categories .container .categorie-item.education {
+  background: linear-gradient(132deg, #ce9ffc 3.49%, #7367f0 97.49%);
+}
+
+body main section.categories .container .categorie-item.planning {
+  background: linear-gradient(132deg, #6b73ff 3.49%, #000dff 97.49%);
+}
+
+body main section.categories .container .categorie-item.gift {
+  width: 230px;
+  background: linear-gradient(132deg, #ec8c69 3.49%, #fa7199 97.49%);
+}
+
+body main section.categories .container .categorie-item .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255, 255, 255, 0.142);
+}
+
+body main section.categories .container .categorie-item .icon span {
+  font-size: 35px;
+  opacity: 0.8;
+}
+
+body main section.categories .container .categorie-item .label {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+body main section.products .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,7 +672,7 @@ body main section.products {
   padding: 4px;
 }
 
-body main section.products .product-item {
+body main section.products .container .product-item {
   color: #000;
   width: 180px;
   background: #fff;
@@ -552,14 +680,14 @@ body main section.products .product-item {
   border-radius: 6px;
 }
 
-body main section.products .product-item .thumbnail {
+body main section.products .container .product-item .thumbnail {
   width: 100%;
   height: 180px;
   overflow: hidden;
   position: relative;
 }
 
-body main section.products .product-item .thumbnail img {
+body main section.products .container .product-item .thumbnail img {
   height: 100%;
   position: absolute;
   left: 50%;
@@ -567,16 +695,16 @@ body main section.products .product-item .thumbnail img {
           transform: translateX(-50%);
 }
 
-body main section.products .product-item .stars span {
+body main section.products .container .product-item .stars span {
   font-size: 14px;
   color: gold;
 }
 
-body main section.products .product-item .content {
+body main section.products .container .product-item .content {
   padding: 4px;
 }
 
-body main section.products .product-item .content .product-title {
+body main section.products .container .product-item .content .product-title {
   font-size: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -587,12 +715,12 @@ body main section.products .product-item .content .product-title {
   -webkit-box-orient: vertical;
 }
 
-body main section.products .product-item .content table td .type {
+body main section.products .container .product-item .content table td .type {
   color: #007185;
   font-size: 12px;
 }
 
-body main section.products .product-item .content table td .highlight {
+body main section.products .container .product-item .content table td .highlight {
   background: #eb5757;
   color: #fff;
   font-size: 10px;
@@ -600,24 +728,24 @@ body main section.products .product-item .content table td .highlight {
   border-radius: 2px;
 }
 
-body main section.products .product-item .content table td .price .currency,
-body main section.products .product-item .content table td .price .float {
+body main section.products .container .product-item .content table td .price .currency,
+body main section.products .container .product-item .content table td .price .float {
   font-size: 12px;
 }
 
-body main section.products .product-item .content table td .price .num {
+body main section.products .container .product-item .content table td .price .num {
   font-size: 24px;
 }
 
-body main section.products .product-item .content table td .compared-price {
+body main section.products .container .product-item .content table td .compared-price {
   font-size: 12px;
 }
 
-body main section.products .product-item .content table td .compared-price .compared {
+body main section.products .container .product-item .content table td .compared-price .compared {
   text-decoration: line-through;
 }
 
-body main section.products .product-item .buy-btn button {
+body main section.products .container .product-item .buy-btn button {
   background: transparent;
   margin-bottom: 10px;
 }
