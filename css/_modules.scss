@@ -42,3 +42,33 @@
         border-radius: $size;
     }
 }
+
+.download {
+    width: fit-content;
+    padding: 5px 10px;
+    background: #009688;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 20px auto;
+    cursor: pointer;
+    &:hover {
+        background: #00695c;
+    }
+
+    a {
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .icon {
+        width: fit-content;
+        height: fit-content;
+        margin-right: 10px;
+    }
+}
