@@ -162,18 +162,19 @@ body {
                 .container {
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 4px;
+                    justify-content: space-between;
+                    gap: 20px;
                     font-size: 12px;
-                    padding: 4px;
+                    padding: 0 $desktop-paddings - 20px;
                     .product-item {
                         color: #000;
-                        width: 180px;
+                        width: 272px;
                         background: #fff;
                         border: 1px solid #ccc;
                         border-radius: 6px;
                         .thumbnail {
                             width: 100%;
-                            height: 180px;
+                            height: 220px;
                             overflow: hidden;
                             position: relative;
                             img {
@@ -185,14 +186,14 @@ body {
                         }
                         .stars {
                             span {
-                                font-size: 14px;
+                                font-size: 20px;
                                 color: gold;
                             }
                         }
                         .content {
                             padding: 4px;
                             .product-title {
-                                font-size: 12px;
+                                font-size: 16px;
                                 overflow: hidden;
                                 text-overflow: ellipsis;
                                 display: -webkit-box;
