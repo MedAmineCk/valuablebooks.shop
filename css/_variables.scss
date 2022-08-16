@@ -43,8 +43,10 @@ $shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
   @return map-get($map: $margins, $key: $devis-name);
 }
 
-$tablet: 1134px;
 $mobile: 500px;
+$desktop: 1024px;
+$desktop-margins: 22px;
+$desktop-paddings: 80px;
 
 @mixin mobile {
   @media (max-width: #{$mobile}) {

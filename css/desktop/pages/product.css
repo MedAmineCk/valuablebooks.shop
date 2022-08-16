@@ -537,239 +537,85 @@ footer .footer-bottom {
 }
 
 body {
-  background: radial-gradient(#655197 2px, transparent 3px), radial-gradient(#655197 2px, transparent 3px), #fff;
-  background-position: 0 0, 20px 20px;
-  background-size: 40px 40px;
+  background: white;
 }
 
 body main {
   background: #fff;
-  width: 1024px;
-  padding: 22px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
   position: relative;
   padding-top: 60px;
 }
 
-body main section .c-label {
-  margin: 20px 0;
+body main section.product {
+  padding: 10px;
+  margin-bottom: 70px;
 }
 
-body main section.cover {
-  height: 300px;
-}
-
-body main section.cover .swiper {
-  position: absolute;
-  width: 100%;
-  height: 300px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-body main section.cover .swiper .swiper-ctrl {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.571);
-  width: 40px;
-  height: 40px;
-  border-radius: 40px;
+body main section.product .medias {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body main section.cover .swiper .swiper-ctrl:after {
-  font-size: 20px;
-}
-
-body main section.cover .swiper .swiper-button-prev {
-  left: 22px;
-}
-
-body main section.cover .swiper .swiper-pagination-bullet {
-  background: #ccc;
-}
-
-body main section.cover .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: #fff;
-}
-
-body main section.cover .swiper .swiper-slide {
-  width: 100%;
-  padding: 20px 80px;
-  color: #fff;
-}
-
-body main section.cover .swiper .swiper-slide.slide_1 {
-  background: #99d1be;
-}
-
-body main section.cover .swiper .swiper-slide.slide_2 {
-  background: #e6e7e9;
-  color: #000;
-}
-
-body main section.cover .swiper .swiper-slide.slide_3 {
-  background: #8db8c2;
-}
-
-body main section.cover .swiper .swiper-slide.slide_4 {
-  background: #7b7b7b;
-}
-
-body main section.cover .swiper .swiper-slide .thumbnail {
-  width: 200px;
-  margin-right: 10px;
-}
-
-body main section.cover .swiper .swiper-slide .thumbnail img {
-  width: 160px;
-  height: 220px;
-}
-
-body main section.cover .swiper .swiper-slide .product-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: #000;
-}
-
-body main section.cover .swiper .swiper-slide .stars {
   margin-bottom: 10px;
 }
 
-body main section.cover .swiper .swiper-slide .sub-title {
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-body main section.cover .swiper .swiper-slide a {
+body main section.product .medias .thumbnail,
+body main section.product .medias .images {
+  border: 1px solid #ccc;
+  border-radius: 4px;
   background: #fff;
-  padding: 10px 20px;
-  color: #000000;
-  border-radius: 50px;
-  position: absolute;
-  right: 80px;
-  bottom: 60px;
-}
-
-body main section.categories .container {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 20px;
-      grid-template-areas: "coloring puzzel gift" "education planning gift";
-  padding: 0 58px;
-}
-
-body main section.categories .container .categorie-item {
+  width: 100%;
+  height: 300px;
   position: relative;
-  width: 300px;
-  height: 110px;
-  color: #fff;
-  padding: 10px;
-  border-radius: 8px;
 }
 
-body main section.categories .container .categorie-item.coloring {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: coloring;
-  background: linear-gradient(132deg, #fad961 3.49%, #f76b1c 97.49%);
+body main section.product .medias .thumbnail img,
+body main section.product .medias .images img {
+  max-height: 100%;
 }
 
-body main section.categories .container .categorie-item.puzzel {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: puzzel;
-  background: linear-gradient(132deg, #6253e1 3.49%, #04befe 97.49%);
+body main section.product .medias .thumbnail {
+  overflow: hidden;
 }
 
-body main section.categories .container .categorie-item.education {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: education;
-  background: linear-gradient(132deg, #ce9ffc 3.49%, #7367f0 97.49%);
-}
-
-body main section.categories .container .categorie-item.planning {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: planning;
-  background: linear-gradient(132deg, #6b73ff 3.49%, #000dff 97.49%);
-}
-
-body main section.categories .container .categorie-item.gift {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 3;
-  grid-area: gift;
-  width: 230px;
+body main section.product .medias .thumbnail img {
   height: 100%;
-  background: linear-gradient(132deg, #ec8c69 3.49%, #fa7199 97.49%);
 }
 
-body main section.categories .container .categorie-item .icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 60px;
+body main section.product .medias .images {
+  width: 100px;
+  margin-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: rgba(255, 255, 255, 0.142);
+  gap: 10px;
+  padding: 5px;
 }
 
-body main section.categories .container .categorie-item .icon span {
-  font-size: 35px;
-  opacity: 0.8;
-}
-
-body main section.categories .container .categorie-item .label {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-}
-
-body main section.products .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 4px;
-  font-size: 12px;
-  padding: 4px;
-}
-
-body main section.products .container .product-item {
-  color: #000;
-  width: 180px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-body main section.products .container .product-item .thumbnail {
-  width: 100%;
-  height: 180px;
+body main section.product .medias .images .img-item {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 90px;
   overflow: hidden;
+  width: 70px;
+  border: 1px solid #ccc;
   position: relative;
 }
 
-body main section.products .container .product-item .thumbnail img {
+body main section.product .medias .images .img-item img {
   height: 100%;
   position: absolute;
   left: 50%;
@@ -777,32 +623,118 @@ body main section.products .container .product-item .thumbnail img {
           transform: translateX(-50%);
 }
 
-body main section.products .container .product-item .stars span {
-  font-size: 14px;
-  color: gold;
+body main section.product .content .product-title {
+  margin-bottom: 15px;
 }
 
-body main section.products .container .product-item .content {
+body main section.product .content .product-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.product .content .product-info .info-item {
+  border: 1px solid #ccc;
+  text-align: center;
+  width: 80px;
+  border-radius: 4px;
+  background: #f1f1f1;
   padding: 4px;
 }
 
-body main section.products .container .product-item .content .product-title {
+body main section.product .content .product-info .info-item .label {
+  font-size: 14px;
+  color: #585858;
+}
+
+body main section.product .content .product-info .info-item .data {
+  font-weight: bolder;
   font-size: 12px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+}
+
+body main section.product .content .product-info .info-item .icon {
+  margin: 10px auto;
+}
+
+body main section.product .content .product-info .info-item .icon span {
+  color: #585858;
+}
+
+body main section.product .content .isbn {
+  margin: 10px 0;
+}
+
+body main section.product .content .isbn .icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+body main section.product .content .isbn .icon span {
+  font-size: 40px;
+}
+
+body main section.product .content .isbn .container {
+  font-size: 14px;
+}
+
+body main section.product .content .description .label {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
-  /* number of lines to show */
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bolder;
+  margin-bottom: 10px;
 }
 
-body main section.products .container .product-item .content table td .type {
-  color: #007185;
-  font-size: 12px;
+body main section.product .content .description .label:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  margin-left: 10px;
 }
 
-body main section.products .container .product-item .content table td .highlight {
+body main section.product .content .description .A-plus {
+  width: 100%;
+  margin: 10px auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+body main section.product .content .description .A-plus img {
+  width: 100%;
+}
+
+body main section.product .content .description .container {
+  background: #ffffbe;
+  padding: 10px;
+}
+
+body main section.product .content .description .container ol, body main section.product .content .description .container ul {
+  margin-left: 24px;
+}
+
+body main section.action-bar {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0px;
+  padding: 10px 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.153);
+          box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.153);
+}
+
+body main section.action-bar .highlight {
   background: #eb5757;
   color: #fff;
   font-size: 10px;
@@ -810,25 +742,30 @@ body main section.products .container .product-item .content table td .highlight
   border-radius: 2px;
 }
 
-body main section.products .container .product-item .content table td .price .currency,
-body main section.products .container .product-item .content table td .price .float {
+body main section.action-bar .price {
+  margin-right: 10px;
+}
+
+body main section.action-bar .price .currency,
+body main section.action-bar .price .float {
   font-size: 12px;
 }
 
-body main section.products .container .product-item .content table td .price .num {
-  font-size: 24px;
+body main section.action-bar .price .num {
+  font-size: 28px;
+  font-weight: bold;
 }
 
-body main section.products .container .product-item .content table td .compared-price {
+body main section.action-bar .compared-price {
   font-size: 12px;
 }
 
-body main section.products .container .product-item .content table td .compared-price .compared {
+body main section.action-bar .compared-price .compared {
   text-decoration: line-through;
 }
 
-body main section.products .container .product-item .buy-btn button {
+body main section.action-bar button {
   background: transparent;
   margin-bottom: 10px;
 }
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=product.css.map */

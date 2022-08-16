@@ -1,0 +1,186 @@
+@import "../../variables";
+@import "../../default";
+@import "../../animations";
+@import "../../modules";
+@import "../header";
+@import "../footer";
+
+body {
+    background: rgb(255, 255, 255);
+    main {
+        background: #fff;
+        width: 100%;
+        max-width: $mobile;
+        margin: 0 auto;
+        position: relative;
+        padding-top: $header_height;
+        section {
+            &.product {
+                padding: 10px;
+                margin-bottom: 70px;
+                .medias {
+                    display: flex;
+                    margin-bottom: 10px;
+                    .thumbnail,
+                    .images {
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        background: #fff;
+                        width: 100%;
+                        height: 300px;
+                        position: relative;
+                        img {
+                            max-height: 100%;
+                        }
+                    }
+                    .thumbnail {
+                        overflow: hidden;
+                        img {
+                            height: 100%;
+                        }
+                    }
+                    .images {
+                        width: 100px;
+                        margin-left: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 5px;
+                        .img-item {
+                            width: fit-content;
+                            height: 90px;
+                            overflow: hidden;
+                            width: 70px;
+                            border: 1px solid #ccc;
+                            position: relative;
+                            img {
+                                height: 100%;
+                                position: absolute;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                        }
+                    }
+                }
+                .content {
+                    .product-title {
+                        margin-bottom: 15px;
+                    }
+                    .product-info {
+                        display: flex;
+                        justify-content: space-between;
+                        .info-item {
+                            border: 1px solid #ccc;
+                            text-align: center;
+                            width: 80px;
+                            border-radius: 4px;
+                            background: rgb(241, 241, 241);
+                            padding: 4px;
+                            .label {
+                                font-size: 14px;
+                                color: rgb(88, 88, 88);
+                            }
+                            .data {
+                                font-weight: bolder;
+                                font-size: 12px;
+                            }
+                            .icon {
+                                margin: 10px auto;
+                                span {
+                                    color: rgb(88, 88, 88);
+                                }
+                            }
+                        }
+                    }
+                    .isbn {
+                        margin: 10px 0;
+                        .icon {
+                            $size: 40px;
+                            width: $size;
+                            height: $size;
+                            margin-right: 10px;
+                            span {
+                                font-size: $size;
+                            }
+                        }
+                        .container {
+                            font-size: 14px;
+                        }
+                    }
+                    .description {
+                        .label {
+                            display: flex;
+                            align-items: center;
+                            font-weight: bolder;
+                            margin-bottom: 10px;
+                            &:after {
+                                content: "";
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                background: #000;
+                                margin-left: 10px;
+                            }
+                        }
+                        .A-plus {
+                            width: 100%;
+                            img {
+                                width: 100%;
+                            }
+                            margin: 10px auto;
+                            border-radius: 12px;
+                            overflow: hidden;
+                        }
+                        .container {
+                            background: rgb(255, 255, 190);
+                            padding: 10px;
+                            ol, ul{
+
+                                margin-left: 24px
+                            }
+                        }
+                    }
+                }
+            }
+            &.action-bar {
+                width: 100%;
+                background: #fff;
+                position: fixed;
+                bottom: 0px;
+                padding: 10px 40px;
+                justify-content: space-between;
+                box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.153);
+                .highlight {
+                    background: #eb5757;
+                    color: #fff;
+                    font-size: 10px;
+                    padding: 4px;
+                    border-radius: 2px;
+                }
+                .price {
+                    margin-right: 10px;
+                    .currency,
+                    .float {
+                        font-size: 12px;
+                    }
+                    .num {
+                        font-size: 28px;
+                        font-weight: bold;
+                    }
+                }
+                .compared-price {
+                    font-size: 12px;
+                    .compared {
+                        text-decoration: line-through;
+                    }
+                }
+                button {
+                    background: transparent;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
