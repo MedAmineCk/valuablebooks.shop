@@ -760,6 +760,9 @@ body main section.products .container {
 body main section.products .container .product-item {
   color: #000;
   width: 272px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -802,13 +805,13 @@ body main section.products .container .product-item .content .product-title {
 
 body main section.products .container .product-item .content table td .type {
   color: #007185;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 body main section.products .container .product-item .content table td .highlight {
   background: #eb5757;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   padding: 4px;
   border-radius: 2px;
 }

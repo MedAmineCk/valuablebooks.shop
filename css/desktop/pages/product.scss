@@ -6,28 +6,43 @@
 @import "../footer";
 
 body {
-    background: rgb(255, 255, 255);
+    background: radial-gradient(#655197 2px, transparent 3px), radial-gradient(#655197 2px, transparent 3px), #fff;
+    background-position: 0 0, 20px 20px;
+    background-size: 40px 40px;
     main {
         background: #fff;
-        width: 100%;
-        max-width: $mobile;
-        margin: 0 auto;
+        width: $desktop;
+        padding: $desktop-margins;
+        left: 50%;
+        transform: translateX(-50%);
         position: relative;
         padding-top: $header_height;
         section {
             &.product {
                 padding: 10px;
                 margin-bottom: 70px;
+                display: grid;
+                grid-template-areas:
+                    "medias               rattings"
+                    "medias               title"
+                    "medias               price-area"
+                    "medias               info"
+                    "medias               isbn"
+                    "description          description";
                 .medias {
+                    grid-area: medias;
+                    width: 400px;
+                    height: 400px;
                     display: flex;
                     margin-bottom: 10px;
+                    margin-right: 20px;
                     .thumbnail,
                     .images {
                         border: 1px solid #ccc;
                         border-radius: 4px;
                         background: #fff;
                         width: 100%;
-                        height: 300px;
+                        height: 400px;
                         position: relative;
                         img {
                             max-height: 100%;
@@ -44,7 +59,7 @@ body {
                         margin-left: 10px;
                         display: flex;
                         flex-direction: column;
-                        justify-content: center;
+                        justify-content: start;
                         align-items: center;
                         gap: 10px;
                         padding: 5px;
@@ -64,121 +79,139 @@ body {
                         }
                     }
                 }
-                .content {
-                    .product-title {
-                        margin-bottom: 15px;
-                    }
-                    .product-info {
-                        display: flex;
-                        justify-content: space-between;
-                        .info-item {
-                            border: 1px solid #ccc;
-                            text-align: center;
-                            width: 80px;
-                            border-radius: 4px;
-                            background: rgb(241, 241, 241);
-                            padding: 4px;
-                            .label {
-                                font-size: 14px;
-                                color: rgb(88, 88, 88);
-                            }
-                            .data {
-                                font-weight: bolder;
-                                font-size: 12px;
-                            }
-                            .icon {
-                                margin: 10px auto;
-                                span {
-                                    color: rgb(88, 88, 88);
-                                }
-                            }
-                        }
-                    }
-                    .isbn {
-                        margin: 10px 0;
-                        .icon {
-                            $size: 40px;
-                            width: $size;
-                            height: $size;
-                            margin-right: 10px;
-                            span {
-                                font-size: $size;
-                            }
-                        }
-                        .container {
-                            font-size: 14px;
-                        }
-                    }
-                    .description {
-                        .label {
-                            display: flex;
-                            align-items: center;
-                            font-weight: bolder;
-                            margin-bottom: 10px;
-                            &:after {
-                                content: "";
-                                display: block;
-                                width: 100%;
-                                height: 1px;
-                                background: #000;
-                                margin-left: 10px;
-                            }
-                        }
-                        .A-plus {
-                            width: 100%;
-                            img {
-                                width: 100%;
-                            }
-                            margin: 10px auto;
-                            border-radius: 12px;
-                            overflow: hidden;
-                        }
-                        .container {
-                            background: rgb(255, 255, 190);
-                            padding: 10px;
-                            ol, ul{
-
-                                margin-left: 24px
-                            }
-                        }
-                    }
+                .rattings {
+                    grid-area: rattings;
                 }
-            }
-            &.action-bar {
-                width: 100%;
-                background: #fff;
-                position: fixed;
-                bottom: 0px;
-                padding: 10px 40px;
-                justify-content: space-between;
-                box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.153);
-                .highlight {
-                    background: #eb5757;
-                    color: #fff;
-                    font-size: 10px;
-                    padding: 4px;
-                    border-radius: 2px;
-                }
-                .price {
-                    margin-right: 10px;
-                    .currency,
-                    .float {
-                        font-size: 12px;
-                    }
-                    .num {
-                        font-size: 28px;
+                .product-title {
+                    grid-area: title;
+                    font-size: 18px;
+                    span.bold {
                         font-weight: bold;
                     }
                 }
-                .compared-price {
-                    font-size: 12px;
-                    .compared {
-                        text-decoration: line-through;
+                .product-info {
+                    grid-area: info;
+                    display: flex;
+                    justify-content: space-between;
+                    .info-item {
+                        border: 1px solid #ccc;
+                        text-align: center;
+                        width: 100px;
+                        border-radius: 4px;
+                        background: rgb(241, 241, 241);
+                        padding: 4px;
+                        .label {
+                            font-size: 14px;
+                            color: rgb(88, 88, 88);
+                        }
+                        .data {
+                            font-weight: bolder;
+                            font-size: 12px;
+                        }
+                        .icon {
+                            margin: 10px auto;
+                            span {
+                                color: rgb(88, 88, 88);
+                            }
+                        }
                     }
                 }
-                button {
-                    background: transparent;
-                    margin-bottom: 10px;
+                .isbn {
+                    grid-area: isbn;
+                    margin: 10px 0;
+                    .icon {
+                        $size: 40px;
+                        width: $size;
+                        height: $size;
+                        margin-right: 10px;
+                        span {
+                            font-size: $size;
+                        }
+                    }
+                    .container {
+                        font-size: 14px;
+                    }
+                }
+                .description {
+                    grid-area: description;
+                    display: grid;
+                    grid-template-areas:
+                        "label"
+                        "main-description"
+                        "a-plus";
+                    .label {
+                        grid-area: label;
+                        display: flex;
+                        align-items: center;
+                        font-weight: bolder;
+                        margin-bottom: 10px;
+                        &:after {
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            height: 1px;
+                            background: #000;
+                            margin-left: 10px;
+                        }
+                    }
+                    .A-plus {
+                        grid-area: a-plus;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        img {
+                            width: 100%;
+                            max-width: 600px;
+                            margin: 0 auto;
+                        }
+                        margin: 10px auto;
+                        border-radius: 12px;
+                        overflow: hidden;
+                    }
+                    .container {
+                        grid-area: main-description;
+                        background: rgb(255, 255, 190);
+                        padding: 10px;
+                        ol,
+                        ul {
+                            margin-left: 24px;
+                        }
+                    }
+                }
+                .action-bar {
+                    grid-area: price-area;
+                    width: 100%;
+                    background: #fff;
+                    padding: 10px 40px;
+                    justify-content: space-between;
+                    .highlight {
+                        background: #eb5757;
+                        color: #fff;
+                        font-size: 16px;
+                        padding: 4px;
+                        border-radius: 2px;
+                    }
+                    .price {
+                        margin-right: 10px;
+                        .currency,
+                        .float {
+                            font-size: 18px;
+                        }
+                        .num {
+                            font-size: 45px;
+                            font-weight: bold;
+                        }
+                    }
+                    .compared-price {
+                        font-size: 16px;
+                        .compared {
+                            text-decoration: line-through;
+                        }
+                    }
+                    button {
+                        background: transparent;
+                        margin-bottom: 10px;
+                    }
                 }
             }
         }

@@ -537,14 +537,18 @@ footer .footer-bottom {
 }
 
 body {
-  background: white;
+  background: radial-gradient(#655197 2px, transparent 3px), radial-gradient(#655197 2px, transparent 3px), #fff;
+  background-position: 0 0, 20px 20px;
+  background-size: 40px 40px;
 }
 
 body main {
   background: #fff;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
+  width: 1024px;
+  padding: 22px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   position: relative;
   padding-top: 60px;
 }
@@ -552,13 +556,23 @@ body main {
 body main section.product {
   padding: 10px;
   margin-bottom: 70px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "medias               rattings" "medias               title" "medias               price-area" "medias               info" "medias               isbn" "description          description";
 }
 
 body main section.product .medias {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 1;
+  grid-area: medias;
+  width: 400px;
+  height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
+  margin-right: 20px;
 }
 
 body main section.product .medias .thumbnail,
@@ -567,7 +581,7 @@ body main section.product .medias .images {
   border-radius: 4px;
   background: #fff;
   width: 100%;
-  height: 300px;
+  height: 400px;
   position: relative;
 }
 
@@ -594,9 +608,9 @@ body main section.product .medias .images {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -623,11 +637,27 @@ body main section.product .medias .images .img-item img {
           transform: translateX(-50%);
 }
 
-body main section.product .content .product-title {
-  margin-bottom: 15px;
+body main section.product .rattings {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: rattings;
 }
 
-body main section.product .content .product-info {
+body main section.product .product-title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: title;
+  font-size: 18px;
+}
+
+body main section.product .product-title span.bold {
+  font-weight: bold;
+}
+
+body main section.product .product-info {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: info;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -636,52 +666,68 @@ body main section.product .content .product-info {
           justify-content: space-between;
 }
 
-body main section.product .content .product-info .info-item {
+body main section.product .product-info .info-item {
   border: 1px solid #ccc;
   text-align: center;
-  width: 80px;
+  width: 100px;
   border-radius: 4px;
   background: #f1f1f1;
   padding: 4px;
 }
 
-body main section.product .content .product-info .info-item .label {
+body main section.product .product-info .info-item .label {
   font-size: 14px;
   color: #585858;
 }
 
-body main section.product .content .product-info .info-item .data {
+body main section.product .product-info .info-item .data {
   font-weight: bolder;
   font-size: 12px;
 }
 
-body main section.product .content .product-info .info-item .icon {
+body main section.product .product-info .info-item .icon {
   margin: 10px auto;
 }
 
-body main section.product .content .product-info .info-item .icon span {
+body main section.product .product-info .info-item .icon span {
   color: #585858;
 }
 
-body main section.product .content .isbn {
+body main section.product .isbn {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: isbn;
   margin: 10px 0;
 }
 
-body main section.product .content .isbn .icon {
+body main section.product .isbn .icon {
   width: 40px;
   height: 40px;
   margin-right: 10px;
 }
 
-body main section.product .content .isbn .icon span {
+body main section.product .isbn .icon span {
   font-size: 40px;
 }
 
-body main section.product .content .isbn .container {
+body main section.product .isbn .container {
   font-size: 14px;
 }
 
-body main section.product .content .description .label {
+body main section.product .description {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: description;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "label" "main-description" "a-plus";
+}
+
+body main section.product .description .label {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: label;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -692,7 +738,7 @@ body main section.product .content .description .label {
   margin-bottom: 10px;
 }
 
-body main section.product .content .description .label:after {
+body main section.product .description .label:after {
   content: "";
   display: block;
   width: 100%;
@@ -701,70 +747,84 @@ body main section.product .content .description .label:after {
   margin-left: 10px;
 }
 
-body main section.product .content .description .A-plus {
+body main section.product .description .A-plus {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: a-plus;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 10px auto;
   border-radius: 12px;
   overflow: hidden;
 }
 
-body main section.product .content .description .A-plus img {
+body main section.product .description .A-plus img {
   width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-body main section.product .content .description .container {
+body main section.product .description .container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main-description;
   background: #ffffbe;
   padding: 10px;
 }
 
-body main section.product .content .description .container ol, body main section.product .content .description .container ul {
+body main section.product .description .container ol,
+body main section.product .description .container ul {
   margin-left: 24px;
 }
 
-body main section.action-bar {
+body main section.product .action-bar {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: price-area;
   width: 100%;
   background: #fff;
-  position: fixed;
-  bottom: 0px;
   padding: 10px 40px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.153);
-          box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.153);
 }
 
-body main section.action-bar .highlight {
+body main section.product .action-bar .highlight {
   background: #eb5757;
   color: #fff;
-  font-size: 10px;
+  font-size: 16px;
   padding: 4px;
   border-radius: 2px;
 }
 
-body main section.action-bar .price {
+body main section.product .action-bar .price {
   margin-right: 10px;
 }
 
-body main section.action-bar .price .currency,
-body main section.action-bar .price .float {
-  font-size: 12px;
+body main section.product .action-bar .price .currency,
+body main section.product .action-bar .price .float {
+  font-size: 18px;
 }
 
-body main section.action-bar .price .num {
-  font-size: 28px;
+body main section.product .action-bar .price .num {
+  font-size: 45px;
   font-weight: bold;
 }
 
-body main section.action-bar .compared-price {
-  font-size: 12px;
+body main section.product .action-bar .compared-price {
+  font-size: 16px;
 }
 
-body main section.action-bar .compared-price .compared {
+body main section.product .action-bar .compared-price .compared {
   text-decoration: line-through;
 }
 
-body main section.action-bar button {
+body main section.product .action-bar button {
   background: transparent;
   margin-bottom: 10px;
 }
