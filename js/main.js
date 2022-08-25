@@ -7,3 +7,15 @@ function scrollTo(_div) {
     400
   );
 }
+
+//preview the Book by clicking the other images
+$(".medias .images .img-item").on("click", function () {
+  //switch between images
+  let thumbnail, selectedItem;
+  [thumbnail, selectedItem] = [
+    $(this).find("img").attr("src"),
+    $(".medias .thumbnail img").attr("src"),
+  ];
+  $(".medias .thumbnail img").attr("src", thumbnail);
+  $(this).find("img").attr("src", selectedItem);
+});

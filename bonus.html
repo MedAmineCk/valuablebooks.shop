@@ -130,10 +130,7 @@
                         <div class="text">Download the Bonus PDF Sheets</div>
                     </a>
                 </div>
-
             </div>
-
-
         </section>
     </main>
 
@@ -147,16 +144,6 @@
     <script src="../js/plugins.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/mobile.js"></script>
-
-    <script>
-        $('.medias .images .img-item').on('click', function () {
-            //switch between images
-            let thumbnail, selectedItem;
-            [thumbnail, selectedItem] = [$(this).find('img').attr('src'), $('.medias .thumbnail img').attr('src')];
-            $('.medias .thumbnail img').attr('src', thumbnail);
-            $(this).find('img').attr('src', selectedItem);
-        })
-    </script>
 </body>
 
 </html>
