@@ -250,7 +250,7 @@ a {
   }
 }
 
-.label {
+.section-faq .label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,11 +267,11 @@ a {
   margin: 40px 0;
 }
 
-.label h2 {
+.section-faq .label h2 {
   color: #bf1e2e;
 }
 
-.label .ln {
+.section-faq .label .ln {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,13 +280,12 @@ a {
   align-items: center;
 }
 
-.label .ln span {
+.section-faq .label .ln span {
   color: #bf1e2e;
   margin: 0 10px;
 }
 
-.label .ln::before,
-.label .ln::after {
+.section-faq .label .ln::before, .section-faq .label .ln::after {
   content: "";
   display: block;
   width: 60px;
@@ -331,6 +330,10 @@ a {
   margin-top: 20px;
 }
 
+.section-faq .faq-list .faq .faq-question:hover {
+  background-color: #732851;
+}
+
 .section-faq .faq-list .faq .faq-question a {
   color: white;
   width: 100%;
@@ -343,10 +346,6 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.section-faq .faq-list .faq .faq-question:hover {
-  background-color: #732851;
 }
 
 .section-faq .collapsible {
